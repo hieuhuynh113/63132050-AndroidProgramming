@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Profile photo -->
+
+    <!-- Name -->
+
+    <ImageView
+        android:id="@+id/profilePhotoImageView"
+        android:layout_width="440dp"
+        android:layout_height="440dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-1dp"
+        android:src="@drawable/hieuhuynh" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Huỳnh Trung Hiếu"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profilePhotoImageView"
+        android:layout_marginTop="16dp" />
+
+    <!-- Age verification badge -->
+    <!-- Height -->
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lớp: 63.CNTT-3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/nameTextView"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"/>
+
+    <!-- Occupation -->
+    <TextView
+        android:id="@+id/occupationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MSSV: 63132050"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/heightTextView"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"/>
+
+    <!-- Distance -->
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đang học tại trường đại học Nha Trang"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/occupationTextView"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/hobbyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sở thích: du lịch, chơi game, yêu động vật"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/occupationTextView"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="18sp"/>
+
+    <!-- Social media logos -->
+    <LinearLayout
+        android:id="@+id/socialMediaLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/distanceTextView"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/facebookLogoImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/fb"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/githubLogoImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/githup"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/instagramLogoImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/instagram" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
