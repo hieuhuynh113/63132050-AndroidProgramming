@@ -118,7 +118,16 @@ public class GameView extends View {
                 gameOver = true;
                 launchGameOver();
             }
-            
+            if (((ballX + ball.getWidth()) >= paddleX)
+            && (ballX <= paddleX + paddle.getWidth())
+            && (ballY + ball.getHeight() >= paddleY)
+            && (ballY + ball.getHeight() <= paddleY + paddle.getHeight())){
+                if (mpHit != null){
+                    mpHit.start();
+                }
+                velocity.setX(velocity.getX() + 1);
+
+            }
         }
     }
 
