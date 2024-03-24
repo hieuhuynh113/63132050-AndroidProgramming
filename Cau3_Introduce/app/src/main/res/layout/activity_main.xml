@@ -32,7 +32,7 @@
     <!-- Age verification badge -->
     <!-- Height -->
     <TextView
-        android:id="@+id/heightTextView"
+        android:id="@+id/classTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lớp: 63.CNTT-3"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:text="MSSV: 63132050"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/heightTextView"
+        android:layout_below="@id/classTextView"
         android:layout_marginTop="8dp"
         android:textSize="18sp"/>
 
