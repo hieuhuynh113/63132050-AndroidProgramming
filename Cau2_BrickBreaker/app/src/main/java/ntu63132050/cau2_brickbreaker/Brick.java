@@ -12,7 +12,7 @@ public class Brick {
         this.height = height;
     }
 
-    public void setVisible() {
+    public void setInvisible() {
         isVisible = false;
     }
 

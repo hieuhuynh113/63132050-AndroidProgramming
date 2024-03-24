@@ -142,8 +142,36 @@ public class GameView extends View {
                 healthPaint.setColor(Color.RED);
             }
             canvas.drawRect(dWidth-200, 30, dWidth - 200 + 60 * life, 80, healthPaint);
+            for (int i=0; i<numBricks; i++){
+                if (bricks[i].getVisibility()){
+                    if (ballX + ballWidth >= bricks[i].column * bricks[i].width
+                    && ballX <= bricks[i].column * bricks[i].width + bricks[i].width
+                    && ballY <= bricks[i].row * bricks[i].height + bricks[i].height
+                    && ballY >= bricks[i].row * bricks[i].height){
+                        if (mpBreak != null){
+                            mpBreak.start();
+                        }
+                        velocity.setY((velocity.getY() + 1) * -1);
+                        bricks[i].setInvisible();
+                        points += 10;
+                        brokenBricks++;
+                        if (brokenBricks == 24){
+                            launchGameOver();
+                        }
+                    }
+                }
+            }
+
+            if (brokenBricks == numBricks){
+                gameOver = true;
+            }
+            if (!gameOver){
+                handler.postDelayed(runnable, UPDATE_MILLIS);
+            }
         }
     }
+
+
 
     private void launchGameOver() {
         handler.removeCallbacksAndMessages(null);
