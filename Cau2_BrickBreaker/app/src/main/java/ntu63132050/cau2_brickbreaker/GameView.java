@@ -198,9 +198,9 @@ public class GameView extends View {
 
     private void launchGameOver() {
         handler.removeCallbacksAndMessages(null);
-        /*Intent intent = new Intent(context, GameOver.class);
-        intent.putExtra("points", points);
-        context.startActivity(intent);*/
+//        Intent intent = new Intent(context, GameOver.class);
+//        intent.putExtra("points", points);
+//        context.startActivity(intent);
         ((Activity) context).finish();
     }
 
