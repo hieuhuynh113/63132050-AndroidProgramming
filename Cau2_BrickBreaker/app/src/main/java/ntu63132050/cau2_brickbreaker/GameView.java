@@ -156,8 +156,8 @@ public class GameView extends View {
                         velocity.setY((velocity.getY() + 1) * -1);
                         bricks[i].setInvisible();
                         points += 10;
-                        brokenBricks++;
                         if (brokenBricks == 24){
+                        brokenBricks++;
                             //launchGameOver();
                         }
                     }
