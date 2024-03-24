@@ -13,6 +13,7 @@ import android.graphics.Paint;
 import android.media.MediaPlayer;
 import android.provider.MediaStore;
 import android.view.Display;
+import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -171,7 +172,29 @@ public class GameView extends View {
         }
     }
 
-
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        float touchX = event.getX();
+        float touchY = event.getY();
+        if (touchY >= paddleY){
+            int action = event.getAction();
+            if (action == MotionEvent.ACTION_DOWN){
+                oldX = event.getX();
+                oldPaddleX = paddleX;
+            }
+            if (action == MotionEvent.ACTION_MOVE){
+                float shilf = oldX - touchX;
+                float newPaddleX = oldPaddleX - shilf;
+                if (newPaddleX <= 0)
+                    paddleX = 0;
+                else if (newPaddleX >= dWidth - paddle.getWidth())
+                    paddleX = dWidth - paddle.getWidth();
+                else
+                    paddleX = newPaddleX;
+            }
+        }
+        return true;
+    }
 
     private void launchGameOver() {
         handler.removeCallbacksAndMessages(null);
