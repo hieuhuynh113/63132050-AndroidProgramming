@@ -43,7 +43,7 @@
 
     <!-- Occupation -->
     <TextView
-        android:id="@+id/occupationTextView"
+        android:id="@+id/MSSVTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MSSV: 63132050"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="Đang học tại trường đại học Nha Trang"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/occupationTextView"
+        android:layout_below="@id/TextView"
         android:layout_marginTop="8dp"
         android:textSize="18sp"/>
 
