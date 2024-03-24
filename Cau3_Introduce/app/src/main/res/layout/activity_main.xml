@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text="Sở thích: du lịch, chơi game, yêu động vật"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/occupationTextView"
+        android:layout_below="@id/MSSVTextView"
         android:layout_marginTop="40dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
