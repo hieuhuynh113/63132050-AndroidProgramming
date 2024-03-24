@@ -126,8 +126,22 @@ public class GameView extends View {
                     mpHit.start();
                 }
                 velocity.setX(velocity.getX() + 1);
-
+                velocity.setY((velocity.getY() + 1) * -1);
             }
+            canvas.drawBitmap(ball, ballX, ballY, null);
+            canvas.drawBitmap(paddle, paddleX, paddleY, null);
+            for (int i=0; i<numBricks; i++){
+                if (bricks[i].getVisibility()){
+                    canvas.drawRect(bricks[i].column * bricks[i].width + 1, bricks[i].row * bricks[i].height + 1, bricks[i].column * bricks[i].width + bricks[i].width -1, bricks[i].row * bricks[i].height + bricks[i].height -1, brickPaint);
+                }
+            }
+            canvas.drawText("" + points, 20, TEXT_SIZE, textPaint);
+            if (life == 2){
+                healthPaint.setColor(Color.YELLOW);
+            } else if (life == 1) {
+                healthPaint.setColor(Color.RED);
+            }
+            canvas.drawRect(dWidth-200, 30, dWidth - 200 + 60 * life, 80, healthPaint);
         }
     }
 
