@@ -106,20 +106,21 @@ public class GameView extends View {
         if (ballY <= 0){
             velocity.setY(velocity.getY() * -1);
         }
-        if (ballY > paddleY + paddle.getHeight()){
-            ballX = 1 + random.nextInt(dWidth - ball.getWidth() -1);
-            ballY = dHeight/3;
-            if (mpMiss != null){
+        if (ballY > paddleY + paddle.getHeight()) {
+            ballX = 1 + random.nextInt(dWidth - ball.getWidth() - 1);
+            ballY = dHeight / 3;
+            if (mpMiss != null) {
                 mpMiss.start();
             }
             velocity.setX(xVelocity());
             velocity.setY(32);
             life--;
-            if (life == 0){
+            if (life == 0) {
                 gameOver = true;
-                launchGameOver();
+                //launchGameOver();
             }
-            if (((ballX + ball.getWidth()) >= paddleX)
+        }
+        if (((ballX + ball.getWidth()) >= paddleX)
             && (ballX <= paddleX + paddle.getWidth())
             && (ballY + ball.getHeight() >= paddleY)
             && (ballY + ball.getHeight() <= paddleY + paddle.getHeight())){
@@ -157,7 +158,7 @@ public class GameView extends View {
                         points += 10;
                         brokenBricks++;
                         if (brokenBricks == 24){
-                            launchGameOver();
+                            //launchGameOver();
                         }
                     }
                 }
@@ -170,7 +171,6 @@ public class GameView extends View {
                 handler.postDelayed(runnable, UPDATE_MILLIS);
             }
         }
-    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -198,9 +198,9 @@ public class GameView extends View {
 
     private void launchGameOver() {
         handler.removeCallbacksAndMessages(null);
-        Intent intent = new Intent(context, GameOver.class);
+        /*Intent intent = new Intent(context, GameOver.class);
         intent.putExtra("points", points);
-        context.startActivity(intent);
+        context.startActivity(intent);*/
         ((Activity) context).finish();
     }
 
