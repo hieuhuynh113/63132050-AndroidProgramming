@@ -25,7 +25,7 @@
         android:text="Huỳnh Trung Hiếu"
         android:textStyle="bold"
         android:textSize="25sp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
         android:layout_below="@id/profilePhotoImageView"
         android:layout_marginTop="16dp" />
 
@@ -36,10 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lớp: 63.CNTT-3"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/nameTextView"
         android:layout_marginTop="8dp"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"/>
 
     <!-- Occupation -->
     <TextView
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MSSV: 63132050"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
         android:layout_below="@id/classTextView"
         android:layout_marginTop="8dp"
         android:textSize="18sp"/>
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đang học tại trường đại học Nha Trang"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
         android:layout_below="@id/MSSVTextView"
         android:layout_marginTop="8dp"
         android:textSize="18sp"/>
@@ -68,11 +68,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sở thích: du lịch, chơi game, yêu động vật"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
         android:layout_below="@id/MSSVTextView"
         android:layout_marginTop="40dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:textSize="18sp"/>
 
     <!-- Social media logos -->
