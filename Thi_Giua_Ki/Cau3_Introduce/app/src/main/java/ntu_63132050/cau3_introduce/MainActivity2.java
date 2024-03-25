@@ -23,7 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
     public void loginHandle (View v){
-        if (username.getText().toString().equals("root") && password.getText().toString().equals("123456")){
+        if (username.getText().toString().equals("hieu") && password.getText().toString().equals("123")){
             Intent intent = new Intent(MainActivity2.this,MainActivity.class);
             startActivity(intent);
         }
