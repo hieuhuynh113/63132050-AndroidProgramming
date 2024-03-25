@@ -29,8 +29,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/hiuthubar_/"));
         startActivity(intent);
     }
-    public void backToMain (View v){
-        finish();
-    }
 }
 
