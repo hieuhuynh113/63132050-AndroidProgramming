@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,88 +7,101 @@
     android:layout_height="match_parent">
 
     <!-- Profile photo -->
-    <ImageView
-        android:id="@+id/profilePhotoImageView"
-        android:layout_width="412dp"
-        android:layout_height="412dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="-1dp"
-        android:src="@drawable/hieuhuynh" />
 
     <!-- Name -->
-    <TextView
-        android:id="@+id/nameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Huỳnh Trung Hiếu"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/profilePhotoImageView"
-        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/profilePhotoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="412dp"
+        android:src="@drawable/hieuhuynh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
 
     <!-- Age verification badge -->
     <!-- Height -->
     <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Huỳnh Trung Hiếu"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePhotoImageView" />
+
+    <!-- Occupation -->
+    <TextView
         android:id="@+id/heightTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lớp: 63.CNTT-3"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/nameTextView"
         android:layout_marginTop="8dp"
-        android:textSize="18sp" />
+        android:text="Lớp: 63.CNTT-3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
 
-    <!-- Occupation -->
     <TextView
         android:id="@+id/occupationTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MSSV: 63132050"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/heightTextView"
         android:layout_marginTop="8dp"
-        android:textSize="18sp" />
+        android:text="MSSV: 63132050"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightTextView" />
 
     <!-- Distance -->
     <TextView
         android:id="@+id/distanceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sở thích: du lịch, chơi game, yêu động vật"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/occupationTextView"
         android:layout_marginTop="8dp"
-        android:textSize="18sp" />
+        android:text="Sở thích: du lịch, chơi game, yêu động vật"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/occupationTextView" />
 
     <!-- Social media logos -->
     <LinearLayout
         android:id="@+id/socialMediaLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/distanceTextView"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distanceTextView">
 
         <ImageView
             android:id="@+id/facebookLogoImageView"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/fb"
-            android:layout_marginEnd="16dp" />
+            android:onClick="facebookLink"/>
 
         <ImageView
             android:id="@+id/githubLogoImageView"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/githup"
-            android:layout_marginEnd="16dp" />
+            android:onClick="githupLink"
+            />
 
         <ImageView
             android:id="@+id/instagramLogoImageView"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/instagram" />
+            android:src="@drawable/instagram"
+            android:onClick="instagramLink"/>
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
